@@ -16,7 +16,7 @@ struct Node* createNode(int value)
     return newNode;
 }
 
-
+/*insert node at the end */
 void insertEnd(struct Node **head, int value)
 {
     struct Node *newNode = createNode(value);
