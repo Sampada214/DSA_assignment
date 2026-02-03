@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Definition of node */
 struct Node
 {
     int data;
     struct Node *next;
 };
 
-/* Function to create a new node */
+/*to create a new node */
 struct Node* createNode(int value)
 {
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -17,7 +16,7 @@ struct Node* createNode(int value)
     return newNode;
 }
 
-/* Function to insert node at the end */
+
 void insertEnd(struct Node **head, int value)
 {
     struct Node *newNode = createNode(value);
@@ -35,7 +34,7 @@ void insertEnd(struct Node **head, int value)
     temp->next = newNode;
 }
 
-/* Function for normal traversal */
+/*for normal traversal */
 void normalTraversal(struct Node *head)
 {
     struct Node *temp = head;
@@ -47,7 +46,7 @@ void normalTraversal(struct Node *head)
     printf("\n");
 }
 
-/* Function for reverse traversal using recursion */
+/*reverse traversal using recursion */
 void reverseTraversal(struct Node *head)
 {
     if (head == NULL)
@@ -57,7 +56,6 @@ void reverseTraversal(struct Node *head)
     printf("%d ", head->data);
 }
 
-/* Main function */
 int main()
 {
     struct Node *head = NULL;
